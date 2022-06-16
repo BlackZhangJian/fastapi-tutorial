@@ -1,0 +1,587 @@
+{
+  "latest": {
+    "confirmed": 2370542,
+    "deaths": 14578,
+    "recovered": 0
+  },
+  "locations": [
+    {
+      "id": 59,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Anhui",
+      "last_updated": "2022-05-18T15:00:35.701310Z",
+      "coordinates": {
+        "latitude": "31.8257",
+        "longitude": "117.2264"
+      },
+      "latest": {
+        "confirmed": 1065,
+        "deaths": 6,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 60,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Beijing",
+      "last_updated": "2022-05-18T15:00:35.733023Z",
+      "coordinates": {
+        "latitude": "40.1824",
+        "longitude": "116.4142"
+      },
+      "latest": {
+        "confirmed": 2874,
+        "deaths": 9,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 61,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Chongqing",
+      "last_updated": "2022-05-18T15:00:35.763766Z",
+      "coordinates": {
+        "latitude": "30.0572",
+        "longitude": "107.874"
+      },
+      "latest": {
+        "confirmed": 708,
+        "deaths": 6,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 62,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Fujian",
+      "last_updated": "2022-05-18T15:00:35.794544Z",
+      "coordinates": {
+        "latitude": "26.0789",
+        "longitude": "117.9874"
+      },
+      "latest": {
+        "confirmed": 3147,
+        "deaths": 1,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 63,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Gansu",
+      "last_updated": "2022-05-18T15:00:35.828176Z",
+      "coordinates": {
+        "latitude": "35.7518",
+        "longitude": "104.2861"
+      },
+      "latest": {
+        "confirmed": 681,
+        "deaths": 2,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 64,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Guangdong",
+      "last_updated": "2022-05-18T15:00:35.859789Z",
+      "coordinates": {
+        "latitude": "23.3417",
+        "longitude": "113.4244"
+      },
+      "latest": {
+        "confirmed": 7268,
+        "deaths": 8,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 65,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Guangxi",
+      "last_updated": "2022-05-18T15:00:35.893932Z",
+      "coordinates": {
+        "latitude": "23.8298",
+        "longitude": "108.7881"
+      },
+      "latest": {
+        "confirmed": 1611,
+        "deaths": 2,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 66,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Guizhou",
+      "last_updated": "2022-05-18T15:00:35.914837Z",
+      "coordinates": {
+        "latitude": "26.8154",
+        "longitude": "106.8748"
+      },
+      "latest": {
+        "confirmed": 185,
+        "deaths": 2,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 67,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Hainan",
+      "last_updated": "2022-05-18T15:00:35.933355Z",
+      "coordinates": {
+        "latitude": "19.1959",
+        "longitude": "109.7453"
+      },
+      "latest": {
+        "confirmed": 288,
+        "deaths": 6,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 68,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Hebei",
+      "last_updated": "2022-05-18T15:00:35.951986Z",
+      "coordinates": {
+        "latitude": "39.549",
+        "longitude": "116.1306"
+      },
+      "latest": {
+        "confirmed": 2004,
+        "deaths": 7,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 69,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Heilongjiang",
+      "last_updated": "2022-05-18T15:00:35.971720Z",
+      "coordinates": {
+        "latitude": "47.862",
+        "longitude": "127.7615"
+      },
+      "latest": {
+        "confirmed": 2983,
+        "deaths": 13,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 70,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Henan",
+      "last_updated": "2022-05-18T15:00:35.990221Z",
+      "coordinates": {
+        "latitude": "37.8957",
+        "longitude": "114.9042"
+      },
+      "latest": {
+        "confirmed": 3144,
+        "deaths": 22,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 71,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Hong Kong",
+      "last_updated": "2022-05-18T15:00:36.008820Z",
+      "coordinates": {
+        "latitude": "22.3",
+        "longitude": "114.2"
+      },
+      "latest": {
+        "confirmed": 1209068,
+        "deaths": 9361,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 72,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Hubei",
+      "last_updated": "2022-05-18T15:00:36.027437Z",
+      "coordinates": {
+        "latitude": "30.9756",
+        "longitude": "112.2707"
+      },
+      "latest": {
+        "confirmed": 68398,
+        "deaths": 4512,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 73,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Hunan",
+      "last_updated": "2022-05-18T15:00:36.045898Z",
+      "coordinates": {
+        "latitude": "27.6104",
+        "longitude": "111.7088"
+      },
+      "latest": {
+        "confirmed": 1393,
+        "deaths": 4,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 74,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Inner Mongolia",
+      "last_updated": "2022-05-18T15:00:36.064866Z",
+      "coordinates": {
+        "latitude": "44.0935",
+        "longitude": "113.9448"
+      },
+      "latest": {
+        "confirmed": 1753,
+        "deaths": 1,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 75,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Jiangsu",
+      "last_updated": "2022-05-18T15:00:36.083366Z",
+      "coordinates": {
+        "latitude": "32.9711",
+        "longitude": "119.455"
+      },
+      "latest": {
+        "confirmed": 2218,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 76,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Jiangxi",
+      "last_updated": "2022-05-18T15:00:36.102064Z",
+      "coordinates": {
+        "latitude": "27.614",
+        "longitude": "115.7221"
+      },
+      "latest": {
+        "confirmed": 1383,
+        "deaths": 1,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 77,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Jilin",
+      "last_updated": "2022-05-18T15:00:36.120832Z",
+      "coordinates": {
+        "latitude": "43.6661",
+        "longitude": "126.1923"
+      },
+      "latest": {
+        "confirmed": 40276,
+        "deaths": 5,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 78,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Liaoning",
+      "last_updated": "2022-05-18T15:00:36.139222Z",
+      "coordinates": {
+        "latitude": "41.2956",
+        "longitude": "122.6085"
+      },
+      "latest": {
+        "confirmed": 1670,
+        "deaths": 2,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 79,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Macau",
+      "last_updated": "2022-05-18T15:00:36.160715Z",
+      "coordinates": {
+        "latitude": "22.1667",
+        "longitude": "113.55"
+      },
+      "latest": {
+        "confirmed": 82,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 80,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Ningxia",
+      "last_updated": "2022-05-18T15:00:36.181010Z",
+      "coordinates": {
+        "latitude": "37.2692",
+        "longitude": "106.1655"
+      },
+      "latest": {
+        "confirmed": 122,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 81,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Qinghai",
+      "last_updated": "2022-05-18T15:00:36.199589Z",
+      "coordinates": {
+        "latitude": "35.7452",
+        "longitude": "95.9956"
+      },
+      "latest": {
+        "confirmed": 147,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 82,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Shaanxi",
+      "last_updated": "2022-05-18T15:00:36.218223Z",
+      "coordinates": {
+        "latitude": "35.1917",
+        "longitude": "108.8701"
+      },
+      "latest": {
+        "confirmed": 3278,
+        "deaths": 3,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 83,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Shandong",
+      "last_updated": "2022-05-18T15:00:36.236607Z",
+      "coordinates": {
+        "latitude": "36.3427",
+        "longitude": "118.1498"
+      },
+      "latest": {
+        "confirmed": 2735,
+        "deaths": 7,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 84,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Shanghai",
+      "last_updated": "2022-05-18T15:00:36.255019Z",
+      "coordinates": {
+        "latitude": "31.202",
+        "longitude": "121.4491"
+      },
+      "latest": {
+        "confirmed": 62350,
+        "deaths": 586,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 85,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Shanxi",
+      "last_updated": "2022-05-18T15:00:36.273486Z",
+      "coordinates": {
+        "latitude": "37.5777",
+        "longitude": "112.2922"
+      },
+      "latest": {
+        "confirmed": 420,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 86,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Sichuan",
+      "last_updated": "2022-05-18T15:00:36.292217Z",
+      "coordinates": {
+        "latitude": "30.6171",
+        "longitude": "102.7103"
+      },
+      "latest": {
+        "confirmed": 2171,
+        "deaths": 3,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 87,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Tianjin",
+      "last_updated": "2022-05-18T15:00:36.311301Z",
+      "coordinates": {
+        "latitude": "39.3054",
+        "longitude": "117.323"
+      },
+      "latest": {
+        "confirmed": 1827,
+        "deaths": 3,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 88,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Tibet",
+      "last_updated": "2022-05-18T15:00:36.337360Z",
+      "coordinates": {
+        "latitude": "31.6927",
+        "longitude": "88.0924"
+      },
+      "latest": {
+        "confirmed": 1,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 89,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Unknown",
+      "last_updated": "2022-05-18T15:00:36.361716Z",
+      "coordinates": {
+        "latitude": "",
+        "longitude": ""
+      },
+      "latest": {
+        "confirmed": 939022,
+        "deaths": 0,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 90,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Xinjiang",
+      "last_updated": "2022-05-18T15:00:36.380082Z",
+      "coordinates": {
+        "latitude": "41.1129",
+        "longitude": "85.2401"
+      },
+      "latest": {
+        "confirmed": 1008,
+        "deaths": 3,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 91,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Yunnan",
+      "last_updated": "2022-05-18T15:00:36.398446Z",
+      "coordinates": {
+        "latitude": "24.974",
+        "longitude": "101.487"
+      },
+      "latest": {
+        "confirmed": 2130,
+        "deaths": 2,
+        "recovered": 0
+      }
+    },
+    {
+      "id": 92,
+      "country": "China",
+      "country_code": "CN",
+      "country_population": 1392730000,
+      "province": "Zhejiang",
+      "last_updated": "2022-05-18T15:00:36.417060Z",
+      "coordinates": {
+        "latitude": "29.1832",
+        "longitude": "120.0934"
+      },
+      "latest": {
+        "confirmed": 3132,
+        "deaths": 1,
+        "recovered": 0
+      }
+    }
+  ]
+}

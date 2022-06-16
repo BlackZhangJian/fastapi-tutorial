@@ -1,0 +1,68 @@
+kind: pipeline  # 定义对象类型，还有 secret 和 signature 两种类型
+name: Drone CICD Test  # 定义流水线类型， 还有 kubernetes、exec、ssh 等
+type: docker  # 定义流水线名称
+
+
+# 项目根目录，仅临时工作区，执行完流水线后会自动关闭
+workspace:
+  path: /root/CodeSpace/fastapi-tutorial
+
+steps:  # 定义流水线执行步骤，步骤按顺序执行
+  # 将工作区内的文件转移到宿主机上
+  - name: code-scp 
+    image: appleboy/drone-scp  # scp镜像
+    settings:
+      host: 119.91.149.215
+      username: root
+      password: 3488702759Zhang
+      port: 22
+      target: /root/dronetest/fastapi-tutorial
+      source: .
+
+  # 推送镜像到镜像仓库
+  - name: pushup
+    image: plugins/docker
+    settings:
+      registry: ccr.ccs.tencentyun.com/drone-test
+      repo: fastapi-tutorial
+      username: 100008585132
+      password: Bowen@registry
+      tags: 
+        - latest
+      insecure: true 
+      when:
+        branch: [test, uat, main]
+        event: [ push ]
+
+    # 部署项目
+    - name: code-deploy
+      image: appleboy/drone-ssh  # 链接宿主机的 SSH 插件镜像
+      settings:
+        host: 119.91.149.215  # 远程连接地址
+        username: root  # 远程连接账号
+        password: 3488702759Zhang
+        port: 22  # 远程连接端口
+        # 相关的命令的执行
+        script:
+          - cd /root/dronetest/fastapi-tutorial
+          # 每次发布更新代码都需要重新构建新的镜像！因为我们的代码是复制到镜像里面去的！
+          #- docker-compose stop && echo y | docker-compose rm && docker rmi fatest_api:latest
+          - docker-compose stop && docker-compose up -d --build
+          # 不要这样写！- docker-compose up --build && docker-compose up -d
+
+    - name: notify
+      image: drillster/drone-email
+      settings:
+        host: smtp.qq.com      # 例如 smtp.qq.com
+        port: 465  #  例如QQ邮箱端口465
+        username:   # 邮箱用户名
+          from_secret: 1741647630@qq.com
+        password:  # 邮箱密码
+          from_secret: uhnyousywhebjfii
+        subject: "Drone build: [{{ build.status }}] {{ repo.name }} ({{ repo.branch }}) #{{ build.number }}"
+        from: 1741647630@qq.com
+        skip_verify: true
+        recipients_only: true  # 只发送给指定邮件收件人，不默认发送给流水线创建人；
+        recipients: [ 308711822@qq.com]
+      when:  # 执行条件
+        status: [ changed, failure, success]
