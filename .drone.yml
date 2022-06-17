@@ -23,6 +23,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
   - name: pushup
     image: plugins/docker
     settings:
+      dockerfile: Dockerfile
       registry: ccr.ccs.tencentyun.com/drone-test
       repo: fastapi-tutorial
       username: 100008585132
@@ -31,7 +32,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
         - latest
       insecure: true 
       when:
-        branch: [test, uat, main]
+        branch: [test, uat, main, master]
         event: [ push ]
 
     # 部署项目
@@ -44,11 +45,18 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
         port: 22  # 远程连接端口
         # 相关的命令的执行
         script:
-          - cd /root/dronetest/fastapi-tutorial
-          # 每次发布更新代码都需要重新构建新的镜像！因为我们的代码是复制到镜像里面去的！
-          #- docker-compose stop && echo y | docker-compose rm && docker rmi fatest_api:latest
-          - docker-compose stop && docker-compose up -d --build
-          # 不要这样写！- docker-compose up --build && docker-compose up -d
+          - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
+          - docker rm -f fastapi-tutorial >/dev/null 2>&1
+          - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
+          # - cd /root/dronetest/fastapi-tutorial
+          # # 每次发布更新代码都需要重新构建新的镜像！因为我们的代码是复制到镜像里面去的！
+          # #- docker-compose stop && echo y | docker-compose rm && docker rmi fatest_api:latest
+          # - docker-compose stop && docker-compose up -d --build
+          # # 不要这样写！- docker-compose up --build && docker-compose up -d
+        when:
+          branch: [test, uat, main, master]
+          event: [ push ]
+
 
     - name: notify
       image: drillster/drone-email
@@ -63,6 +71,6 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
         from: 1741647630@qq.com
         skip_verify: true
         recipients_only: true  # 只发送给指定邮件收件人，不默认发送给流水线创建人；
-        recipients: [ 308711822@qq.com]
+        recipients: [1741647630@qq.com]
       when:  # 执行条件
         status: [ changed, failure, success]
