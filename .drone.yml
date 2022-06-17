@@ -11,13 +11,13 @@ image_pull_secrets:
   - dockerconfigjson
 
 # 挂载卷
-volumes:
-  - name: dcoker
-    host:
-      path: /var/run/docker.sock
-  - name: docker-daemon
-    host:
-      path: /etc/docker/daemon.json
+# volumes:
+#   - name: dcoker
+#     host:
+#       path: /var/run/docker.sock
+#   - name: docker-daemon
+#     host:
+#       path: /etc/docker/daemon.json
 
 # 定义流水线执行步骤，步骤按顺序执行
 steps:
