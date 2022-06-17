@@ -27,9 +27,9 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
       registry: ccr.ccs.tencentyun.com
       repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
       username: 
-        from_secret: 100008585132
+        from_secret: ccr_username
       password: 
-       from_secret: Bowen@registry
+       from_secret: ccr_password
       tags: 
         - latest
       insecure: true 
