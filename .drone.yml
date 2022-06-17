@@ -32,6 +32,8 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
        from_secret: ccr_password
       tags: 
         - latest
+      script:
+        - dig @114.114.114.114 ccr.ccs.tencentyun.com
       when:
         branch: [test, uat, main, master]
         event: [ push ]
