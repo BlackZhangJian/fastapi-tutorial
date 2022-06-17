@@ -33,6 +33,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
       tags: 
         - latest
       insecure: true 
+      privileged: true
       when:
         branch: [test, uat, main, master]
         event: [ push ]
