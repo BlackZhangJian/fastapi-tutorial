@@ -59,7 +59,7 @@ steps:
         path: /etc/docker/daemon.json
     commands:
       - pwd
-      - docker build -t ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest -f Dockerfile
+      - docker build -t ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest .
       - docker push ${IMAGE}:latest
     when:
       branch: [test, uat, main, master]
