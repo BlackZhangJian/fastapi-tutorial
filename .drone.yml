@@ -59,7 +59,7 @@ steps:
         path: /etc/docker/daemon.json
     environment: 
       IMAGE: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
-    script:
+    commands:
       - docker build -f ./Dockerfile -t IMAGE:latest
       - docker push IMAGE:latest
     when:
@@ -75,7 +75,7 @@ steps:
       password: 3488702759Zhang
       port: 22  # 远程连接端口
       # 相关的命令的执行
-      script:
+      commands:
         - docker login ccr.ccs.tencentyun.com --username=100008585132 --password=Bowen@registry
         - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
         - docker rm -f fastapi-tutorial >/dev/null 2>&1
