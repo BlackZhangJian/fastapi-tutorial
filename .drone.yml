@@ -9,15 +9,15 @@ workspace:
 
 steps:  # 定义流水线执行步骤，步骤按顺序执行
   # 将工作区内的文件转移到宿主机上
-  - name: code-scp 
-    image: appleboy/drone-scp  # scp镜像
-    settings:
-      host: 119.91.149.215
-      username: root
-      password: 3488702759Zhang
-      port: 22
-      target: /root/dronetest/fastapi-tutorial
-      source: .
+  # - name: code-scp 
+  #   image: appleboy/drone-scp  # scp镜像
+  #   settings:
+  #     host: 119.91.149.215
+  #     username: root
+  #     password: 3488702759Zhang
+  #     port: 22
+  #     target: /root/dronetest/fastapi-tutorial
+  #     source: .
 
   # 推送镜像到镜像仓库
   - name: pushup
@@ -30,7 +30,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
       password: Bowen@registry
       tags: 
         - latest
-      insecure: true 
+      # insecure: true 
       when:
         branch: [test, uat, main, master]
         event: [ push ]
