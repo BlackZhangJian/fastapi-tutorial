@@ -60,7 +60,7 @@ steps:
         path: /etc/docker/daemon.json
     commands:
       - docker build -t ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest .
-      - docker push ${IMAGE}:latest
+      - docker push ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
     when:
       branch: [test, uat, main, master]
       event: [push]
