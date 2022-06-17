@@ -32,7 +32,6 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
        from_secret: ccr_password
       tags: 
         - latest
-      insecure: true 
       when:
         branch: [test, uat, main, master]
         event: [ push ]
