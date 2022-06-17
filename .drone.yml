@@ -57,10 +57,8 @@ steps:
         path: /var/run/docker.sock
       - name: docker-daemon
         path: /etc/docker/daemon.json
-    environment: 
-      IMAGE: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
     commands:
-      - docker build -f ./Dockerfile -t ${IMAGE}:latest
+      - docker build -f ./Dockerfile -t ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
       - docker push ${IMAGE}:latest
     when:
       branch: [test, uat, main, master]
