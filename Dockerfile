@@ -6,7 +6,9 @@ WORKDIR /fastapi-tutorial
 
 COPY ./requirements.txt /code/requirements.txt
 
-RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt -i http://mirrors.tencentyun.com/pypi/simple --trusted-host mirrors.tencentyun.com
+RUN pip config set global.index http://mirrors.tencentyun.com/pypi/simple
+    && pip config set install.trusted-host mirrors.tencentyun.com
+    && pip install --no-cache-dir --upgrade -r /code/requirements.txt
 
 COPY . /fastapi-tutorial
 
