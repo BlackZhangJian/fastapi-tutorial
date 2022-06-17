@@ -52,12 +52,12 @@ steps:
   # 手动指定镜像编译和推送
   - name: docker-push
     image: docker:19.03.1
-    privileged: true
-    volumes:
-      - name: docker
-        path: /var/run/docker.sock
-      - name: docker-daemon
-        path: /etc/docker/daemon.json
+    # privileged: true
+    # volumes:
+    #   - name: docker
+    #     path: /var/run/docker.sock
+    #   - name: docker-daemon
+    #     path: /etc/docker/daemon.json
     commands:
       - docker build -t ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest .
       - docker push ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
