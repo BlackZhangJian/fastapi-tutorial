@@ -52,6 +52,7 @@ steps:
   # 手动指定镜像编译和推送
   - name: docker-push
     image: docker:19.03.1
+    privileged: true
     volumes:
       - name: docker
         path: /var/run/docker.sock
