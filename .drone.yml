@@ -7,6 +7,9 @@ type: docker  # 定义流水线名称
 workspace:
   path: /root/CodeSpace/fastapi-tutorial
 
+image_pull_secrets:
+  - dockerconfigjson
+
 steps:  # 定义流水线执行步骤，步骤按顺序执行
   # 将工作区内的文件转移到宿主机上
   # - name: code-scp 
@@ -26,9 +29,9 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
     settings:
       registry: ccr.ccs.tencentyun.com
       username: 
-        from_secret: ccr_username
+        from_secret: docker_username
       password: 
-        from_secret: ccr_password
+        from_secret: docker_password
       insecure: true
       debug: true
       repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
@@ -50,7 +53,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
       port: 22  # 远程连接端口
       # 相关的命令的执行
       script:
-        - docker login ccr.ccs.tencentyun.com --username=100008585132 --password=Bowen@registry
+        - docker login ccr.ccs.tencentyun.com --username=  --password=Bowen@registry
         - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
         - docker rm -f fastapi-tutorial >/dev/null 2>&1
         - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
