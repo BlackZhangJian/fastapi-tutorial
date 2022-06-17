@@ -10,6 +10,18 @@ workspace:
 image_pull_secrets:
   - dockerconfigjson
 
+
+
+# 挂载卷
+volumes:
+  - name: dcoker
+    host:
+      path: /var/run/docker.sock
+  - name: docker-daemon
+    host:
+      path: /etc/docker/daemon.json
+
+
 steps:  # 定义流水线执行步骤，步骤按顺序执行
   # 将工作区内的文件转移到宿主机上
   # - name: code-scp 
