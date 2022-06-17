@@ -10,8 +10,6 @@ workspace:
 image_pull_secrets:
   - dockerconfigjson
 
-
-
 # 挂载卷
 volumes:
   - name: dcoker
@@ -21,8 +19,8 @@ volumes:
     host:
       path: /etc/docker/daemon.json
 
-
-steps:  # 定义流水线执行步骤，步骤按顺序执行
+# 定义流水线执行步骤，步骤按顺序执行
+steps:
   # 将工作区内的文件转移到宿主机上
   # - name: code-scp 
   #   image: appleboy/drone-scp  # scp镜像
@@ -62,9 +60,8 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
     environment: 
       IMAGE: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
     commands:
-      - export DRONE_TAG=$(cat .tags)
-      - docker build -f ./Dockerfile -t $IMAGE:$DRONE_TAG
-      - docker push $IMAGE:$DRONE_TAG
+      - docker build -f ./Dockerfile -t $IMAGE:latest
+      - docker push $IMAGE:latest
 
   # 部署项目
   - name: code-deploy
