@@ -26,14 +26,11 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
       dockerfile: Dockerfile
       registry: ccr.ccs.tencentyun.com
       repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
-      username: 
-        from_secret: ccr_username
-      password: 
-        from_secret: ccr_password
+      username: 100008585132
+      password: Bowen@registry
       tags: 
         - latest
       insecure: true 
-      privileged: true
       when:
         branch: [test, uat, main, master]
         event: [ push ]
