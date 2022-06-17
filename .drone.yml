@@ -22,12 +22,15 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
   # 推送镜像到镜像仓库
   - name: pushup
     image: plugins/docker
+    privileged: true
     settings:
       registry: ccr.ccs.tencentyun.com
       username: 
         from_secret: ccr_username
       password: 
-       from_secret: ccr_password
+        from_secret: ccr_password
+      insecure: true
+      debug: true
       repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
       tags: 
         - latest
