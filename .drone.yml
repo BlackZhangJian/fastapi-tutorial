@@ -24,7 +24,7 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
     image: plugins/docker
     settings:
       dockerfile: Dockerfile
-      registry: https://ccr.ccs.tencentyun.com
+      registry: ccr.ccs.tencentyun.com
       repo: drone-test/fastapi-tutorial
       username: 
         from_secret: 100008585132
