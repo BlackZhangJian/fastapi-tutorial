@@ -23,15 +23,15 @@ steps:  # 定义流水线执行步骤，步骤按顺序执行
   - name: pushup
     image: plugins/docker
     settings:
-      dockerfile: Dockerfile
       registry: ccr.ccs.tencentyun.com
-      repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
       username: 
         from_secret: ccr_username
       password: 
        from_secret: ccr_password
+      repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
       tags: 
         - latest
+      dockerfile: Dockerfile
       add_host: ccr.ccs.tencentyun.com:106.55.124.140
       when:
         branch: [test, uat, main, master]
