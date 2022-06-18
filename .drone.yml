@@ -45,6 +45,7 @@ steps:
       tags: 
         - latest
       dockerfile: Dockerfile
+      debug: true
       when:
         branch: [test, uat, main, master]
         event: [ push ]
