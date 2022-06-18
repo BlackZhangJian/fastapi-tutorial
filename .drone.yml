@@ -112,7 +112,7 @@ steps:
     image: guoxudongdocker/drone-dingtalk 
     settings:
       token: 
-        from_secret: dingding  # dingding： 钉钉机器人 token，是 webhook 中 https://oapi.dingtalk.com/robot/send?access_token= 后这部分，https://oapi.dingtalk.com/robot/send?access_token=a9b9ea4f0d58d43366bc1cc8aec3fa3300adfe5b7e735419a47945e8cb376d28
+        from_secret: dingding_token  # dingding： 钉钉机器人 token，是 webhook 中 https://oapi.dingtalk.com/robot/send?access_token= 后这部分，https://oapi.dingtalk.com/robot/send?access_token=a9b9ea4f0d58d43366bc1cc8aec3fa3300adfe5b7e735419a47945e8cb376d28
       type: markdown
       message_color: true
       message_pic: true
