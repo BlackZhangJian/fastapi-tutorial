@@ -6,7 +6,7 @@ WORKDIR /fastapi-tutorial
 
 COPY ./requirements.txt /fastapi-tutorial/requirements.txt
 
-RUN /usr/local/bin/python -m pip -r /fastapi-tutorial/requirements.txt
+RUN /usr/local/bin/python -m pip install -r /fastapi-tutorial/requirements.txt
 
 COPY . /fastapi-tutorial
 

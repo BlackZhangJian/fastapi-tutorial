@@ -48,7 +48,7 @@ steps:
       debug: true
       when:
         branch: [test, uat, main, master]
-        event: [ push ]
+        event: [push]
 
   # # 手动指定镜像编译和推送
   # - name: docker-push
@@ -88,7 +88,7 @@ steps:
         # # 不要这样写！- docker-compose up --build && docker-compose up -d
       when:
         branch: [test, uat, main, master]
-        event: [ push ]
+        event: [push]
 
   # 邮箱通知
   - name: notify
@@ -106,4 +106,4 @@ steps:
       recipients_only: true  # 只发送给指定邮件收件人，不默认发送给流水线创建人；
       recipients: [bowen.zhang@sidus.link]
     when:  # 执行条件
-      status: [ changed, failure, success]
+      status: [changed, failure, success]
