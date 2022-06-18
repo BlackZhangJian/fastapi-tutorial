@@ -77,7 +77,7 @@ steps:
       # 相关的命令的执行
       script:
         - echo hello
-        - docker login ccr.ccs.tencentyun.com --username=100008585132 --password-stdin=ccr.ccs.tencentyun.com
+        - echo Bowen@register | docker login ccr.ccs.tencentyun.com --username=100008585132 --password-stdin
         - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
         - docker rm -f fastapi-tutorial >/dev/null 2>&1
         - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
