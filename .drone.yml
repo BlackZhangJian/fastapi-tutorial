@@ -75,7 +75,8 @@ steps:
       password: 3488702759Zhang
       port: 22  # 远程连接端口
       # 相关的命令的执行
-      commands:
+      script:
+        - echo hello
         - docker login ccr.ccs.tencentyun.com --username=100008585132 --password=Bowen@register
         - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
         - docker rm -f fastapi-tutorial >/dev/null 2>&1
