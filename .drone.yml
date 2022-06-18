@@ -116,8 +116,10 @@ steps:
       secret: 
         from_secret: dingding_sign  # 加签秘钥
       type: markdown
-      message_color: true
-      message_pic: true
+      success_color: 008000
+      failure_color: FF0000
+      success_pic: true
+      failure_pic: true
       sha_link: true
     when:
       status: [failure, success]
