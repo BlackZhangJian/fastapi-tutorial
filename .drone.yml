@@ -113,8 +113,8 @@ steps:
     settings:
       token: 
         from_secret: dingding_token  # 钉钉机器人 token，是 webhook 中 https://oapi.dingtalk.com/robot/send?access_token= 后这部分
-      secret: 
-        from_secret: dingding_sign  # 加签秘钥
+      # secret: 
+      #   from_secret: dingding_sign  # 加签秘钥
       type: markdown
       message_color: true
       message_pic: true
