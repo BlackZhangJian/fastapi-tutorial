@@ -45,7 +45,6 @@ steps:
       tags: 
         - latest
       dockerfile: Dockerfile
-      debug: true
       when:
         branch: [test, uat, main, master]
         event: [push]
@@ -79,13 +78,14 @@ steps:
         - echo hello
         - echo Bowen@register | docker login ccr.ccs.tencentyun.com --username=100008585132 --password-stdin
         - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
-        - docker rm -f fastapi-tutorial >/dev/null 2>&1
+        # - docker rm -f fastapi-tutorial >/dev/null 2>&1
         - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
         # - cd /root/dronetest/fastapi-tutorial
         # # 每次发布更新代码都需要重新构建新的镜像！因为我们的代码是复制到镜像里面去的！
         # #- docker-compose stop && echo y | docker-compose rm && docker rmi fatest_api:latest
         # - docker-compose stop && docker-compose up -d --build
         # # 不要这样写！- docker-compose up --build && docker-compose up -d
+      debug: true
       when:
         branch: [test, uat, main, master]
         event: [push]
