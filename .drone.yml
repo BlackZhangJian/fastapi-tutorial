@@ -22,7 +22,7 @@ image_pull_secrets:
 # 定义流水线执行步骤，步骤按顺序执行
 steps:
   # 将工作区内的文件转移到宿主机上
-  # - name: code-scp 
+  # - name: code-scp
   #   image: appleboy/drone-scp  # scp镜像
   #   settings:
   #     host: 119.91.149.215
@@ -37,16 +37,16 @@ steps:
     image: plugins/docker
     settings:
       registry: ccr.ccs.tencentyun.com
-      username: 
+      username:
         from_secret: ccr_username
-      password: 
+      password:
         from_secret: ccr_password
       repo: ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial
-      tags: 
-        - latest
+      tags:
+        - test
       dockerfile: Dockerfile
       when:
-        branch: [test, uat, main, master]
+        branch: [test, uat, main, master, test_deploy]
         event: [push]
 
   # # 手动指定镜像编译和推送
@@ -77,9 +77,9 @@ steps:
       script:
         - echo hello
         - echo Bowen@register | docker login ccr.ccs.tencentyun.com --username=100008585132 --password-stdin
-        - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
+        - docker pull ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:test
         - docker rm -f fastapi-tutorial >/dev/null 2>&1
-        - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:latest
+        - docker run -itd -p 8000:8000 --name=fastapi-tutorial ccr.ccs.tencentyun.com/drone-test/fastapi-tutorial:test
         # - cd /root/dronetest/fastapi-tutorial
         # # 每次发布更新代码都需要重新构建新的镜像！因为我们的代码是复制到镜像里面去的！
         # #- docker-compose stop && echo y | docker-compose rm && docker rmi fatest_api:latest
@@ -111,9 +111,9 @@ steps:
   - name: notification
     image: guoxudongdocker/drone-dingtalk
     settings:
-      token: 
+      token:
         from_secret: dingding_token  # 钉钉机器人 token，是 webhook 中 https://oapi.dingtalk.com/robot/send?access_token= 后这部分
-      # secret: 
+      # secret:
       #   from_secret: dingding_sign  # 加签秘钥
       type: markdown
       message_color: true
