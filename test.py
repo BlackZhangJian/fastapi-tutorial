@@ -3,9 +3,9 @@
 '''
 Author: Bowen
 Date: 2022-05-06
-LastEditTime: 2022-05-13
+LastEditTime: 2023-01-06
 LastEditors: Bowen
-Description: 
+Description:
 FilePath: /fastapi-tutorial/test.py
 '''
 import os
@@ -15,4 +15,4 @@ import os
 print(os.environ.keys())
 print(os.getenv("ENVIRONMENT"))
 
-print('\033[1;31mtttttttttttt\033[0m')
+print('\033[1;31mttttdfsdfstttttttt\033[0m')
